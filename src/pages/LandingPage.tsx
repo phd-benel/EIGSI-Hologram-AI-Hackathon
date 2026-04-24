@@ -47,7 +47,7 @@ export function LandingPage() {
       <section className="section subtle">
         <div className="container">
           <div className="sectionHeader">
-            <h2 className="sectionTitle">Programme (Matinée)</h2>
+            <h2 className="sectionTitle">Programme (Matinée) - Le Mardi 12 Mai 2026</h2>
             <p className="sectionHint">09h00 → 12h30</p>
           </div>
 
@@ -85,13 +85,17 @@ export function LandingPage() {
                 <p className="programNoteLabel">Idéalement : prototype fonctionnel</p>
                 <ul className="programNoteList">
                   <li>
-                    <strong>Basique</strong> : l’IA comprend la voix de l’utilisateur et génère une
-                    réponse personnalisée (Texte-à-Parole) avec synchronisation des lèvres.
+                    <strong>Basique</strong> : un dispositif holographique simple où le système
+                    répond à votre voix. Exemple : vous demandez{' '}
+                    <em>« Comment marche un moteur thermique ? »</em> → l’assistant IA
+                    répond <strong>à voix haute</strong> (Texte-à-Parole) avec <strong>animation</strong>{' '}
+                    et <strong>synchronisation des lèvres</strong>. == En fin de compte, c'est un ChatGPT qui prend vie sous les traits d'un professeur holographique ✨.
                   </li>
                   <li>
-                    <strong>Avancé</strong> : l’assistant affiche des médias dynamiques (molécules,
-                    graphiques Excel, schémas techniques) à côté de lui dans l’hologramme, selon le
-                    contexte.
+                    <strong>Avancé</strong> : même principe, mais avec <strong>affichage en temps réel</strong>{' '}
+                    synchronisé avec l’explication. Par exemple, pendant que le “prof” décrit le moteur,
+                    vous <strong>visualisez</strong> à côté de lui un moteur (schéma/3D) — et l’affichage évolue au rythme de
+                    ce qui est dit (mise en évidence, étapes, zoom, annotations).
                   </li>
                 </ul>
               </div>
@@ -100,7 +104,7 @@ export function LandingPage() {
                 <p className="programNoteLabel">Au minimum : idéation avancée</p>
                 <ul className="programNoteList">
                   <li>Idée claire de la conception et des parcours utilisateur.</li>
-                  <li>Technologies à utiliser (stack, APIs, voix, TTS, 3D/AR si besoin).</li>
+                  <li>Technologies à utiliser (stack, APIs, voix, TTS, 3D/AR ...).</li>
                   <li>Étude de budget, risques, contraintes et plan d’exécution.</li>
                 </ul>
               </div>
@@ -109,16 +113,13 @@ export function LandingPage() {
             <p className="programNoteBottom">
               <strong>Une seule équipe gagnante</strong> sera suivie via un monitoring prêt pour
               améliorer la solution et viser un <strong>Brevet National (Brevet d’invention)</strong>.
-              Vous avez <strong>2 semaines</strong> pour concevoir et développer un prototype
-              d’assistant pédagogique holographique propulsé par l’IA.
-              <br />
-              <br />
-              <strong>Le 24 Avril</strong>, venez finaliser votre dispositif et convaincre notre jury
-              d’experts. À la clé : un accompagnement exclusif pour transformer votre invention en un
-              Brevet National.
-              <br />
-              <br />
-              <strong>Innovez. Répondez. Gagnez.</strong>
+              <span className="programNoteImageWrap">
+                <img
+                  className="programNoteImage"
+                  src="/Figures/Image2.png"
+                  alt="Informations clés : 2 semaines, finalisation le 24 Avril, jury et brevet"
+                />
+              </span>
             </p>
           </div>
         </div>
