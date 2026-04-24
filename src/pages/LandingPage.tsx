@@ -25,7 +25,7 @@ export function LandingPage() {
       <header id="top" className="hero" aria-label="Bannière Hackathon">
         <div className="container">
           <div className="heroCard" aria-label="Bannière du hackathon">
-            <img className="heroImg" src="/Figures/1-Hero-Banner.png" alt="Hackathon Assistant IA" />
+            <img className="heroImg" src="/Figures/Header.png" alt="Hackathon Assistant IA" />
           </div>
         </div>
       </header>
@@ -183,6 +183,9 @@ export function LandingPage() {
         </div>
       </section>
 
+      
+
+      <footer className="footer">
       <section className="section">
         <div className="container">
           <div className="wideCard" aria-label="Bannière finale">
@@ -195,9 +198,8 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-
-      <footer className="footer">
         <div className="container footerInner">
+          
           <span className="muted">
             Propulsé par Le Cercle des Innovateurs de EIGSI CASABLANCA © {new Date().getFullYear()}
           </span>
