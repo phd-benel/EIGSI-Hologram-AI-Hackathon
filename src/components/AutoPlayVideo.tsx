@@ -14,6 +14,18 @@ export function AutoPlayVideo({ src, className, poster, ariaLabel }: Props) {
   const [wantsSoundNow, setWantsSoundNow] = useState(false)
 
   useEffect(() => {
+    // Browsers require a user gesture once to allow unmuted playback.
+    // We "unlock" audio on the first pointer/key interaction anywhere on the page.
+    const unlock = () => setAudioUnlocked(true)
+    window.addEventListener('pointerdown', unlock, { once: true })
+    window.addEventListener('keydown', unlock, { once: true })
+    return () => {
+      window.removeEventListener('pointerdown', unlock)
+      window.removeEventListener('keydown', unlock)
+    }
+  }, [])
+
+  useEffect(() => {
     const el = videoRef.current
     if (!el) return
 

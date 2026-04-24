@@ -48,6 +48,16 @@ export function LandingPage() {
               alt="Certificat et récompenses"
               loading="lazy"
             />
+            <div className="scrollHint" aria-hidden="true">
+              <span className="scrollArrow" />
+            </div>
+            <span className="programNoteImageWrap">
+                <img
+                  className="programNoteImage"
+                  src="/Figures/Image2.png"
+                  alt="Informations clés : 2 semaines, finalisation le 24 Avril, jury et brevet"
+                />
+              </span>
           </div>
         </div>
       </section>
@@ -117,18 +127,6 @@ export function LandingPage() {
                 </ul>
               </div>
             </div>
-
-            <p className="programNoteBottom">
-              <strong>Une seule équipe gagnante</strong> sera suivie via un monitoring prêt pour
-              améliorer la solution et viser un <strong>Brevet National (Brevet d’invention)</strong>.
-              <span className="programNoteImageWrap">
-                <img
-                  className="programNoteImage"
-                  src="/Figures/Image2.png"
-                  alt="Informations clés : 2 semaines, finalisation le 24 Avril, jury et brevet"
-                />
-              </span>
-            </p>
           </div>
         </div>
       </section>
@@ -137,11 +135,8 @@ export function LandingPage() {
         <div className="container">
           <div className="split">
             <div>
-              <h2 className="sectionTitle">Ressources</h2>
-              <p className="muted">
-                Un espace dédié aux vidéos, liens et documents techniques utiles (API, prompts,
-                bonnes pratiques, exemples).
-              </p>
+              <h2 className="sectionTitle">Voici quelques ressources pour vous aider à débuter. </h2>
+              
             </div>
             <div className="splitAction">
               <Link className="btn primary" to="/ressources">

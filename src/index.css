@@ -125,6 +125,48 @@ a {
   background: white;
 }
 
+.scrollHint {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding-top: 2px;
+}
+
+.scrollArrow {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  border: 1px solid var(--blue-border-weak);
+  background: white;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 18px 50px rgba(0, 35, 102, 0.06);
+}
+
+.scrollArrow::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(180deg, rgba(0, 35, 102, 1), rgba(0, 35, 102, 0.25)) 1;
+  transform: rotate(45deg);
+  animation: scrollBounce 1.25s ease-in-out infinite;
+  filter: drop-shadow(0 8px 16px rgba(0, 35, 102, 0.18));
+}
+
+@keyframes scrollBounce {
+  0%,
+  100% {
+    transform: translateY(-1px) rotate(45deg);
+    opacity: 0.7;
+  }
+  55% {
+    transform: translateY(6px) rotate(45deg);
+    opacity: 1;
+  }
+}
+
 .centerBlock {
   text-align: center;
   display: grid;
@@ -586,6 +628,71 @@ a {
   gap: 16px;
 }
 
+.ytRow {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ytCard {
+  position: relative;
+  border-radius: var(--radius);
+  border: 1px solid var(--blue-border-weak);
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(0, 35, 102, 0.04);
+  transition:
+    transform 180ms ease-in-out,
+    box-shadow 180ms ease-in-out,
+    border-color 180ms ease-in-out;
+}
+
+.ytCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue-border);
+  box-shadow: 0 22px 70px rgba(0, 35, 102, 0.08);
+}
+
+.ytThumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.ytPlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 45%, rgba(0, 35, 102, 0.12), transparent 55%);
+}
+
+.ytPlay::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 35, 102, 0.82);
+  box-shadow: 0 18px 50px rgba(0, 35, 102, 0.25);
+}
+
+.ytPlay::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-38%, -50%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid #ffffff;
+}
+
 .card {
   border-radius: var(--radius);
   border: 1px solid var(--blue-border-weak);
@@ -641,6 +748,10 @@ a {
 @media (max-width: 920px) {
   .cardsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ytRow {
+    grid-template-columns: 1fr;
   }
 
   .programRow {

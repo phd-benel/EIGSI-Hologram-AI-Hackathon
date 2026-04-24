@@ -2,50 +2,10 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { pageMotion } from '../ui/motion'
 
-type ResourceCard = {
-  title: string
-  kind: 'Vidéo' | 'Documentation' | 'Outils'
-  description: string
-  href: string
-}
-
-const resources: ResourceCard[] = [
-  {
-    title: 'React — Docs',
-    kind: 'Documentation',
-    description: 'Hooks, patterns, accessibilité, performance.',
-    href: 'https://react.dev/',
-  },
-  {
-    title: 'Vite — Guide',
-    kind: 'Documentation',
-    description: 'Build rapide, config, plugins.',
-    href: 'https://vite.dev/',
-  },
-  {
-    title: 'Framer Motion — API',
-    kind: 'Documentation',
-    description: 'Transitions, layout animations, micro-interactions.',
-    href: 'https://www.framer.com/motion/',
-  },
-  {
-    title: 'OpenAI — Platform',
-    kind: 'Documentation',
-    description: 'Modèles, sécurité, bonnes pratiques.',
-    href: 'https://platform.openai.com/docs',
-  },
-  {
-    title: 'Prompting — Patterns',
-    kind: 'Outils',
-    description: 'Structurer les prompts, tests, itérations.',
-    href: 'https://www.promptingguide.ai/',
-  },
-  {
-    title: 'Vidéo — Démo (à remplacer)',
-    kind: 'Vidéo',
-    description: 'Lien vidéo de référence pour inspirer le flow produit.',
-    href: 'https://www.youtube.com/',
-  },
+const yt = [
+  { id: '7YWTtCsvgvg', href: 'https://www.youtube.com/watch?v=7YWTtCsvgvg' },
+  { id: 'xZQVfzHZwao', href: 'https://www.youtube.com/watch?v=xZQVfzHZwao' },
+  { id: 'Iv8X3yldbPk', href: 'https://www.youtube.com/watch?v=Iv8X3yldbPk' },
 ]
 
 export function ResourcesPage() {
@@ -61,7 +21,7 @@ export function ResourcesPage() {
         <div className="container topbarInner">
           <div>
             <p className="eyebrow">Ressources techniques</p>
-            <h1 className="pageTitle">Vidéos &amp; Documentation</h1>
+            <h1 className="pageTitle"> Documentation</h1>
           </div>
           <div className="topbarActions">
             <Link className="btn ghost" to="/">
@@ -76,23 +36,28 @@ export function ResourcesPage() {
 
       <section className="section" id="grid">
         <div className="container">
-          <div className="cardsGrid">
-            {resources.map((r) => (
+          <h2 className="sectionTitle">1. Fabrication du Boîtier (DIY &amp; Low-Cost)</h2>
+          <p className="muted" style={{ marginTop: 10, maxWidth: 860 }}>
+            Cliquez sur une miniature pour ouvrir la vidéo complète sur YouTube.
+          </p>
+
+          <div className="ytRow" aria-label="Vidéos YouTube">
+            {yt.map((v) => (
               <a
-                key={`${r.kind}-${r.title}`}
-                className="card"
-                href={r.href}
+                key={v.id}
+                className="ytCard"
+                href={v.href}
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Ouvrir sur YouTube"
               >
-                <div className="cardTop">
-                  <span className="tag">{r.kind}</span>
-                  <span className="cardIcon" aria-hidden="true">
-                    ↗
-                  </span>
-                </div>
-                <h2 className="cardTitle">{r.title}</h2>
-                <p className="cardDesc">{r.description}</p>
+                <img
+                  className="ytThumb"
+                  src={`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`}
+                  alt="Miniature vidéo YouTube"
+                  loading="lazy"
+                />
+                <div className="ytPlay" aria-hidden="true" />
               </a>
             ))}
           </div>
