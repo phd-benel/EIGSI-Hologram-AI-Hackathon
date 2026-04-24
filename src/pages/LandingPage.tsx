@@ -25,7 +25,7 @@ export function LandingPage() {
       <header id="top" className="hero" aria-label="Bannière Hackathon">
         <div className="container">
           <div className="heroCard" aria-label="Bannière du hackathon">
-            <img className="heroImg" src="/Figures/Header.png" alt="Hackathon Assistant IA" />
+            <img className="heroImg" src="/Figures/1-Hero-Banner.png" alt="Hackathon Assistant IA" />
           </div>
         </div>
       </header>
@@ -33,9 +33,13 @@ export function LandingPage() {
       <section className="section">
         <div className="container">
           <div className="centerBlock">
-            <h2 className="sectionTitle">Nous mettons au défi le génie de nos étudiants : Construisez un dispositif Assistant "Prof IA" de demain ...</h2>
-            <h2 className="sectionTitle">Certificat avec une petit image pour tous le monde , Prix pour le ou les Gagnants et Accompagnement au Brevet d'Invention National pour l'équipe lauréate</h2>
-
+            <h2 className="sectionTitle">Nous mettons au défi le génie de nos étudiants : Construisez le dispositif Assistant "Prof IA" du Futur ...</h2>
+            <img
+              className="certifImg"
+              src="/Figures/Certif.png"
+              alt="Certificat et récompenses"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -175,6 +179,19 @@ export function LandingPage() {
                 VOTRE INNOVATION, NOTRE PATRIMOINE. SCANNEZ &amp; CRÉEZ.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="wideCard" aria-label="Bannière finale">
+            <img
+              className="wideImg"
+              src="/Figures/1-Hero-Banner.png"
+              alt="EIGSI — École d’ingénieurs"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>

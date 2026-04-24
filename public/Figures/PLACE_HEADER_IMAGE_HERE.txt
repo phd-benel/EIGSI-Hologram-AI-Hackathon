@@ -1,6 +1,0 @@
-Dépose ici ton image:
-
-public/Figures/Header.png
-
-Ensuite rafraîchis la page (http://localhost:5173/) : elle sera utilisée dans la bannière (Hero).
-
