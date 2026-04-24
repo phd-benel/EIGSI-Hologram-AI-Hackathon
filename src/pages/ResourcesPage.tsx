@@ -27,9 +27,6 @@ export function ResourcesPage() {
             <Link className="btn ghost" to="/">
               Retour
             </Link>
-            <a className="btn primary" href="#grid">
-              Voir la grille
-            </a>
           </div>
         </div>
       </header>
@@ -69,9 +66,6 @@ export function ResourcesPage() {
           <span className="muted">
             Propulsé par Le Cercle des Innovateurs de EIGSI CASABLANCA © {new Date().getFullYear()}
           </span>
-          <Link className="footerLink" to="/">
-            Retour landing
-          </Link>
         </div>
       </footer>
     </motion.main>
