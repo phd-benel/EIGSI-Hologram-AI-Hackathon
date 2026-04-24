@@ -23,22 +23,9 @@ export function LandingPage() {
       transition={pageMotion.transition}
     >
       <header id="top" className="hero" aria-label="Bannière Hackathon">
-        <div className="heroMedia" role="img" aria-label="Aperçu hologramme subtil" />
-        <div className="heroOverlay">
-          <div className="container">
-            <p className="eyebrow">Hackathon Assistant IA — 20 Ans EIGSI Casablanca</p>
-            <h1 className="heroTitle">L&apos;Intelligence qui prend vie</h1>
-            <p className="heroSubtitle">
-              Une expérience calme, précise, orientée produit. Concevez l’assistant IA de demain.
-            </p>
-            <div className="heroActions">
-              <a className="btn primary" href="#inscription">
-                S’inscrire
-              </a>
-              <Link className="btn ghost" to="/ressources">
-                Accéder aux ressources techniques
-              </Link>
-            </div>
+        <div className="container">
+          <div className="heroCard" aria-label="Bannière du hackathon">
+            <img className="heroImg" src="/Figures/Header.png" alt="Hackathon Assistant IA" />
           </div>
         </div>
       </header>

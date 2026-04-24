@@ -166,30 +166,16 @@ a {
 .hero {
   position: relative;
   overflow: hidden;
+  padding: 28px 0 0;
 }
 
 .heroMedia {
   height: clamp(340px, 52vh, 560px);
-  background:
-    radial-gradient(1000px 500px at 25% 20%, rgba(0, 35, 102, 0.14), transparent 58%),
-    radial-gradient(900px 420px at 70% 40%, rgba(0, 35, 102, 0.1), transparent 62%),
-    linear-gradient(120deg, rgba(0, 35, 102, 0.06), rgba(255, 255, 255, 0) 55%),
-    linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  background: white;
 }
 
 .heroMedia::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.55), transparent),
-    linear-gradient(180deg, rgba(0, 35, 102, 0.06), transparent 35%),
-    radial-gradient(900px 520px at 50% 20%, rgba(255, 255, 255, 0.25), transparent 60%);
-  mix-blend-mode: overlay;
-  opacity: 0.7;
-  transform: translateX(-28%);
-  animation: hologram 8.5s ease-in-out infinite;
-  pointer-events: none;
+  content: none;
 }
 
 @keyframes hologram {
@@ -210,7 +196,30 @@ a {
   display: flex;
   align-items: flex-end;
   padding: 34px 0;
+  background-image: url('/Figures/Header.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
 }
+
+.heroCard {
+  border-radius: var(--radius);
+  border: 1px solid var(--blue-border-weak);
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 22px 70px rgba(0, 35, 102, 0.06);
+}
+
+.heroImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: clamp(240px, 42vh, 420px);
+  object-fit: contain;
+  background: white;
+}
+
 
 .heroTitle {
   margin: 0;
