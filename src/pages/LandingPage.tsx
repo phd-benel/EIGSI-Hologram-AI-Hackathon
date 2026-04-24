@@ -5,12 +5,12 @@ import { pageMotion } from '../ui/motion'
 type ProgramRow = { time: string; title: string; detail?: string }
 
 const program: ProgramRow[] = [
-  { time: '09:00', title: 'Accueil & brief', detail: 'Contexte, règles, critères' },
-  { time: '09:30', title: 'Kick-off', detail: 'Formation des équipes, objectifs' },
-  { time: '10:00', title: 'Sprint 1', detail: 'Idéation + architecture' },
-  { time: '11:00', title: 'Sprint 2', detail: 'Prototypage + itération' },
-  { time: '12:00', title: 'Pré-démo', detail: 'Pitch express + alignement' },
-  { time: '12:30', title: 'Clôture matinée', detail: 'Récap & suite' },
+  { time: '09:00', title: 'Accueil', detail: 'À la bibliothèque' },
+  { time: '09:00–11:00', title: 'Séance de travail', detail: 'Avec mentors/coachs' },
+  { time: '11:00–11:20', title: 'Pause café', detail: 'Réseautage avec les mentors' },
+  { time: '11:20', title: 'Début des présentations', detail: '10 min par groupe devant le jury' },
+  { time: '12:00–12:10', title: 'Délibération du jury', detail: '—' },
+  { time: '12:10–12:30', title: 'Remise des prix', detail: 'Clôture' },
 ]
 
 export function LandingPage() {
@@ -76,6 +76,50 @@ export function LandingPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="programNote" aria-label="Consignes de présentation">
+            <h3 className="programNoteTitle">À présenter</h3>
+            <div className="programNoteGrid">
+              <div className="programNoteBlock">
+                <p className="programNoteLabel">Idéalement : prototype fonctionnel</p>
+                <ul className="programNoteList">
+                  <li>
+                    <strong>Basique</strong> : l’IA comprend la voix de l’utilisateur et génère une
+                    réponse personnalisée (Texte-à-Parole) avec synchronisation des lèvres.
+                  </li>
+                  <li>
+                    <strong>Avancé</strong> : l’assistant affiche des médias dynamiques (molécules,
+                    graphiques Excel, schémas techniques) à côté de lui dans l’hologramme, selon le
+                    contexte.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="programNoteBlock">
+                <p className="programNoteLabel">Au minimum : idéation avancée</p>
+                <ul className="programNoteList">
+                  <li>Idée claire de la conception et des parcours utilisateur.</li>
+                  <li>Technologies à utiliser (stack, APIs, voix, TTS, 3D/AR si besoin).</li>
+                  <li>Étude de budget, risques, contraintes et plan d’exécution.</li>
+                </ul>
+              </div>
+            </div>
+
+            <p className="programNoteBottom">
+              <strong>Une seule équipe gagnante</strong> sera suivie via un monitoring prêt pour
+              améliorer la solution et viser un <strong>Brevet National (Brevet d’invention)</strong>.
+              Vous avez <strong>2 semaines</strong> pour concevoir et développer un prototype
+              d’assistant pédagogique holographique propulsé par l’IA.
+              <br />
+              <br />
+              <strong>Le 24 Avril</strong>, venez finaliser votre dispositif et convaincre notre jury
+              d’experts. À la clé : un accompagnement exclusif pour transformer votre invention en un
+              Brevet National.
+              <br />
+              <br />
+              <strong>Innovez. Répondez. Gagnez.</strong>
+            </p>
           </div>
         </div>
       </section>
