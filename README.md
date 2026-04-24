@@ -18,3 +18,5 @@ In an ideal prototype, the assistant can:
 - Optionally render **contextual synchronized visuals** (schematics, 3D, graphs, molecules, etc.) alongside the hologram
 
 The landing page highlights constraints, goals, and the timeline of the 2‑week build. The resources page provides starting points to help teams build a simplified prototype quickly.
+
+<img width="1176" height="876" alt="image" src="https://github.com/user-attachments/assets/72b4883c-5191-42cb-b097-281265cf296b" />
