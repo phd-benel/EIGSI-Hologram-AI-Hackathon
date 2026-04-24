@@ -110,6 +110,24 @@ a {
   background: white;
 }
 
+.videoCard {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--blue-border-weak);
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 22px 70px rgba(0, 35, 102, 0.06);
+}
+
+.videoEl {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+  background: white;
+}
+
 .centerBlock {
   text-align: center;
   display: grid;

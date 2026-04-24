@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { pageMotion } from '../ui/motion'
+import { AutoPlayVideo } from '../components/AutoPlayVideo'
 
 type ProgramRow = { time: string; title: string; detail?: string }
 
@@ -14,6 +15,10 @@ const program: ProgramRow[] = [
 ]
 
 export function LandingPage() {
+  const demoVideoSrc = encodeURI(
+    '/Figures/Firefly Scene on a minimalist student desk in a dimly lit room. On the desk, a Virtual Pedagogical A.mp4',
+  )
+
   return (
     <motion.main
       className="page"
@@ -34,6 +39,9 @@ export function LandingPage() {
         <div className="container">
           <div className="centerBlock">
             <h2 className="sectionTitle">Nous mettons au défi le génie de nos étudiants : Construisez le dispositif Assistant "Prof IA" du Futur ...</h2>
+            <div className="videoCard" aria-label="Aperçu vidéo du dispositif">
+              <AutoPlayVideo className="videoEl" src={demoVideoSrc} ariaLabel="Aperçu vidéo" />
+            </div>
             <img
               className="certifImg"
               src="/Figures/Certif.png"
