@@ -343,7 +343,7 @@ a {
 .programNoteImage {
   display: block;
   width: 100%;
-  max-width: 820px;
+  max-width: none;
   height: auto;
   border-radius: var(--radius);
   border: 1px solid var(--blue-border-weak);

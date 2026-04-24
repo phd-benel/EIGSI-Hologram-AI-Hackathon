@@ -33,13 +33,9 @@ export function LandingPage() {
       <section className="section">
         <div className="container">
           <div className="centerBlock">
-            <h2 className="sectionTitle">Motivation</h2>
-            <p className="lead">
-              Célébrons 20 ans d&apos;excellence à l&apos;EIGSI Casablanca. Nous mettons au défi le
-              génie de nos étudiants : Construisez l&apos;assistant IA de demain. Prix,
-              certifications et accompagnement au Brevet d&apos;Invention National pour l&apos;équipe
-              lauréate.
-            </p>
+            <h2 className="sectionTitle">Nous mettons au défi le génie de nos étudiants : Construisez un dispositif Assistant "Prof IA" de demain ...</h2>
+            <h2 className="sectionTitle">Certificat avec une petit image pour tous le monde , Prix pour le ou les Gagnants et Accompagnement au Brevet d'Invention National pour l'équipe lauréate</h2>
+
           </div>
         </div>
       </section>
