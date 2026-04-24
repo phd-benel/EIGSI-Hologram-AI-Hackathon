@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# EIGSI 2026 AI Hackathon — Landing & Resources (SPA)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for the **official landing page and resources portal** for the **EIGSI 2026 AI Hackathon (EIGSI Casablanca – 20th Anniversary Edition)**.
 
-Currently, two official plugins are available:
+Built as a lightweight **Single Page Application (SPA)**, the site acts as the primary interface to:
+- Invite students and present the challenge
+- Share the morning program and key milestones
+- Centralize technical resources (videos + guidelines)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project context
 
-## React Compiler
+The hackathon challenges participants to design and develop a functional prototype of an **AI‑powered Holographic Pedagogical Assistant** (“Prof IA”).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+In an ideal prototype, the assistant can:
+- Listen to the user (STT — Speech‑to‑Text)
+- Produce a pedagogical answer using an LLM (Groq / Ollama / GPT, etc.)
+- Speak out loud (TTS — Text‑to‑Speech) with **lip‑sync** (animated mouth/lips)
+- Optionally render **contextual synchronized visuals** (schematics, 3D, graphs, molecules, etc.) alongside the hologram
 
-## Expanding the ESLint configuration
+The landing page highlights constraints, goals, and the timeline of the 2‑week build. The resources page provides starting points to help teams build a simplified prototype quickly.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Scope
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Landing** (`/`)
+  - Hero media (images)
+  - Motivation and prizes/certifications
+  - Morning program (12 May 2026)
+  - “What to present” guidelines (baseline vs advanced)
+  - QR / CTA section
+- **Resources** (`/ressources`)
+  - YouTube DIY box build videos (thumbnail cards → open YouTube)
+  - “Resources for the app” (prototype guidance: Brain / Face / Projection)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Tech stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **React + TypeScript + Vite**
+- **react-router-dom** (SPA routing)
+- **framer-motion** (page transitions)
+
+## Getting started (Windows / PowerShell)
+
+From the repository root:
+
+```powershell
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then open the printed URL (usually `http://localhost:5173/`).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### If PowerShell blocks `npm.ps1`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Run via CMD (no system changes):
+
+```powershell
+cmd /c "npm run dev"
 ```
+
+Or allow scripts for the current session only:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+npm run dev
+```
+
+## Assets (images / video)
+
+Static media lives in `public/Figures/` and is referenced via `/Figures/...`.
+
+Examples currently used:
+- `public/Figures/1-Hero-Banner.png`
+- `public/Figures/Header.png`
+- `public/Figures/Certif.png`
+- `public/Figures/Image2.png`
+- `public/Figures/Firefly Scene on a minimalist student desk in a dimly lit room. On the desk, a Virtual Pedagogical A.mp4`
+
+## Important note: autoplay audio
+
+Modern browsers **do not allow unmuted autoplay** without a user gesture (click/tap/keyboard).
+In this project:
+- video can autoplay (muted),
+- sound can automatically enable **after the first user gesture**, when the video is visible + hovered.
+
+## Repository structure
+
+- `src/pages/LandingPage.tsx` — landing page
+- `src/pages/ResourcesPage.tsx` — resources page
+- `src/components/AutoPlayVideo.tsx` — auto play/pause by visibility + audio gating
+- `src/index.css` — global styles
