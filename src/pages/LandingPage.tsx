@@ -6,12 +6,12 @@ import { AutoPlayVideo } from '../components/AutoPlayVideo'
 type ProgramRow = { time: string; title: string; detail?: string }
 
 const program: ProgramRow[] = [
-  { time: '09:00', title: 'Accueil', detail: 'À la bibliothèque' },
-  { time: '09:00–11:00', title: 'Séance de travail', detail: 'Avec mentors/coachs' },
-  { time: '11:00–11:20', title: 'Pause café', detail: 'Réseautage avec les mentors' },
-  { time: '11:20', title: 'Début des présentations', detail: '10 min par groupe devant le jury' },
-  { time: '12:00–12:10', title: 'Délibération du jury', detail: '—' },
-  { time: '12:10–12:30', title: 'Remise des prix', detail: 'Clôture' },
+  { time: '14:00', title: 'Accueil', detail: 'À la bibliothèque' },
+  { time: '14:00–16:00', title: 'Séance de travail', detail: 'Avec mentors/coachs' },
+  { time: '16:00–16:20', title: 'Pause café', detail: 'Réseautage avec les mentors' },
+  { time: '16:20', title: 'Début des présentations', detail: '5-10 min par groupe devant le jury' },
+  { time: '17:00–17:10', title: 'Délibération du jury', detail: '—' },
+  { time: '17:10–17:30', title: 'Remise des prix', detail: 'Clôture' },
 ]
 
 export function LandingPage() {
@@ -71,7 +71,7 @@ export function LandingPage() {
                 La date exacte de l&apos;après-midi consacrée au HACKATHON vous sera précisée prochainement ...
               </p>
             </div>
-            <p className="sectionHint">09h00 → 12h30</p>
+            <p className="sectionHint">14h00 → 17h30</p>
           </div>
 
           <div className="programTable" role="table" aria-label="Planning">
