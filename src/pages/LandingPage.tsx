@@ -65,7 +65,7 @@ export function LandingPage() {
       <section className="section subtle">
         <div className="container">
           <div className="sectionHeader">
-            <h2 className="sectionTitle">Programme (Matinée) - Le Mardi 12 Mai 2026</h2>
+            <h2 className="sectionTitle">Programme (Après-Midi)- Durant la semaine du 10 mai 2026 : la date exacte de l'après-midi consacrée au HACKATHON vous sera précisée prochainement !/h2>
             <p className="sectionHint">09h00 → 12h30</p>
           </div>
 
