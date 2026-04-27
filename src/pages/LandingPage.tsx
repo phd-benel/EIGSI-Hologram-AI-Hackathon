@@ -177,17 +177,37 @@ export function LandingPage() {
           <div className="ctaFinal">
             <div className="qrWrap" aria-label="Emplacement QR Code">
               <div className="qr">
-                <div className="qrGrid" />
-                <div className="qrScanner" aria-hidden="true" />
+                <img
+                  src="/Figures/QRcode.png"
+                  alt="QR code d'inscription"
+                  className="qrImg"
+                  loading="lazy"
+                />
               </div>
               <div className="qrPulse" aria-hidden="true" />
             </div>
 
             <div className="ctaText">
-              <h2 className="sectionTitle">Scannez pour entrer dans l&apos;histoire de l&apos;EIGSI</h2>
-              <p className="boost">
-                VOTRE INNOVATION, NOTRE PATRIMOINE. SCANNEZ &amp; CRÉEZ.
-              </p>
+              <h2 className="sectionTitle">
+                Passez par le QR code ou appuyez sur ce bouton pour vous inscrire via Microsoft Forms.
+              </h2>
+              
+              
+              <div style={{ marginTop: 14 }}>
+                <a
+                  className="btn primary"
+                  href="https://forms.office.com/e/VHKJ7MaNiX?origin=lprLink"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="/Figures/FORM.png"
+                    alt="Microsoft Forms"
+                    style={{ width: 18, height: 18, objectFit: 'contain' }}
+                  />
+                  Ouvrir le formulaire
+                </a>
+              </div>
             </div>
           </div>
         </div>

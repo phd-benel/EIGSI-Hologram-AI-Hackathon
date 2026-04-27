@@ -515,6 +515,13 @@ a {
   box-shadow: 0 14px 40px rgba(0, 35, 102, 0.1);
 }
 
+.qrImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .qrGrid {
   position: absolute;
   inset: 12px;
