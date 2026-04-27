@@ -386,6 +386,70 @@ a {
   font-weight: 600;
 }
 
+@media (max-width: 640px) {
+  .programTable {
+    background: transparent;
+    border: none;
+    overflow: visible;
+  }
+
+  .programHeader {
+    display: none;
+  }
+
+  .programRow {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 14px;
+    margin-top: 12px;
+    border: 1px solid var(--blue-border-weak);
+    border-radius: var(--radius-sm);
+    background: white;
+    box-shadow: 0 14px 40px rgba(0, 35, 102, 0.06);
+  }
+
+  .programRow:first-child {
+    border-top: 1px solid var(--blue-border-weak);
+  }
+
+  .programCell {
+    font-size: 14px;
+  }
+
+  .programCell.time {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(0, 35, 102, 0.06);
+    border: 1px solid rgba(0, 35, 102, 0.12);
+  }
+
+  .programCell:not(.time)::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(0, 35, 102, 0.78);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .centerOnMobile {
+    align-items: center;
+    text-align: center;
+  }
+
+  .centerOnMobile .splitAction {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .programNote {
   margin-top: 14px;
   border-radius: var(--radius);

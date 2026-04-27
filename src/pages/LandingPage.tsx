@@ -88,13 +88,13 @@ export function LandingPage() {
             </div>
             {program.map((row) => (
               <div className="programRow" role="row" key={`${row.time}-${row.title}`}>
-                <div className="programCell time" role="cell">
+                <div className="programCell time" role="cell" data-label="Heure">
                   {row.time}
                 </div>
-                <div className="programCell" role="cell">
+                <div className="programCell" role="cell" data-label="Activité">
                   {row.title}
                 </div>
-                <div className="programCell detail" role="cell">
+                <div className="programCell detail" role="cell" data-label="Détails">
                   {row.detail ?? '—'}
                 </div>
               </div>
@@ -138,7 +138,7 @@ export function LandingPage() {
 
       <section className="section">
         <div className="container">
-          <div className="split">
+          <div className="split centerOnMobile">
             <div>
               <h2 className="sectionTitle">Voici quelques ressources pour vous aider à débuter. </h2>
               
@@ -160,8 +160,7 @@ export function LandingPage() {
             <div className="ctaText">
               <h2 className="sectionTitle">Inscription</h2>
               <p className="muted" style={{ margin: '10px 0 0' }}>
-                Inscrivez-vous seul ou avec vos partenaires. Les affectations finales seront communiquées par mail.
-              </p>
+              Inscrivez-vous individuellement ou en équipe (5 personnes MAX), comme compétiteur ou organisateur. Les affectations finales vous seront transmises ultérieurement.</p>
               <div style={{ marginTop: 14 }}>
                 <a
                   className="btn primary"
