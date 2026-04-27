@@ -162,15 +162,6 @@ export function LandingPage() {
               <p className="muted" style={{ margin: '10px 0 0' }}>
                 Inscrivez-vous seul ou avec vos partenaires. Les affectations finales seront communiquées par mail.
               </p>
-
-              <div className="pillRow" aria-label="Formats d'inscription" style={{ marginTop: 12, justifyContent: 'center' }}>
-                <span className="pill">Solo</span>
-                <span className="pill">Équipe de 4</span>
-              </div>
-
-              <p className="muted" style={{ margin: '14px 0 0' }}>
-                Pour vous inscrire, ouvrez le formulaire Microsoft Forms.
-              </p>
               <div style={{ marginTop: 14 }}>
                 <a
                   className="btn primary"
