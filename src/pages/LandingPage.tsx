@@ -65,7 +65,12 @@ export function LandingPage() {
       <section className="section subtle">
         <div className="container">
           <div className="sectionHeader">
-            <h2 className="sectionTitle">Programme (Après-Midi)- Durant la semaine du 10 mai 2026 : la date exacte de l'après-midi consacrée au HACKATHON vous sera précisée prochainement !/h2>
+            <div>
+              <h3 className="sectionTitle">Programme (Après-Midi) — Durant la semaine du 10 mai 2026</h3>
+              <p className="muted" style={{ margin: '6px 0 0', fontSize: 18, lineHeight: 1.55 }}>
+                La date exacte de l&apos;après-midi consacrée au HACKATHON vous sera précisée prochainement ...
+              </p>
+            </div>
             <p className="sectionHint">09h00 → 12h30</p>
           </div>
 
