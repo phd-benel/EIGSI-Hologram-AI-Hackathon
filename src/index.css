@@ -51,8 +51,42 @@ a {
 }
 
 .page {
+  position: relative;
   min-height: 100svh;
   background: var(--bg);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+  background:
+    /* halo très doux (coins) */
+    radial-gradient(520px 420px at 0% 0%, rgba(0, 35, 102, 0.05), transparent 55%),
+    radial-gradient(520px 420px at 100% 0%, rgba(0, 35, 102, 0.05), transparent 55%),
+    /* petites "étoiles" (gauche) */
+    radial-gradient(1.5px 1.5px at 6% 10%, rgba(0, 35, 102, 0.22), transparent 60%),
+    radial-gradient(1px 1px at 10% 18%, rgba(0, 35, 102, 0.18), transparent 60%),
+    radial-gradient(1.25px 1.25px at 14% 8%, rgba(0, 35, 102, 0.16), transparent 60%),
+    radial-gradient(1px 1px at 18% 22%, rgba(0, 35, 102, 0.14), transparent 60%),
+    radial-gradient(1.5px 1.5px at 9% 28%, rgba(0, 35, 102, 0.16), transparent 60%),
+    /* petites "étoiles" (droite) */
+    radial-gradient(1.5px 1.5px at 94% 10%, rgba(0, 35, 102, 0.22), transparent 60%),
+    radial-gradient(1px 1px at 90% 18%, rgba(0, 35, 102, 0.18), transparent 60%),
+    radial-gradient(1.25px 1.25px at 86% 8%, rgba(0, 35, 102, 0.16), transparent 60%),
+    radial-gradient(1px 1px at 82% 22%, rgba(0, 35, 102, 0.14), transparent 60%),
+    radial-gradient(1.5px 1.5px at 91% 28%, rgba(0, 35, 102, 0.16), transparent 60%);
+  filter: blur(0.15px);
+}
+
+.page > * {
+  position: relative;
+  z-index: 1;
 }
 
 .container {

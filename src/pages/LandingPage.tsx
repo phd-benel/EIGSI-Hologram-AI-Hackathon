@@ -146,7 +146,9 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-
+      <div className="scrollHint" aria-hidden="true">
+              <span className="scrollArrow" />
+      </div>
       <section id="inscription" className="section subtle">
         <div className="container">
           <div className="split">
