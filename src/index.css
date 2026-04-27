@@ -486,7 +486,7 @@ a {
 
 .ctaFinal {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 1fr;
   gap: 26px;
   align-items: center;
   padding: 26px;
@@ -494,6 +494,8 @@ a {
   border: 1px solid var(--blue-border-weak);
   background: white;
   box-shadow: 0 20px 60px rgba(0, 35, 102, 0.06);
+  justify-items: center;
+  text-align: center;
 }
 
 .qrWrap {

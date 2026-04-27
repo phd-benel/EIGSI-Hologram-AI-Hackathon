@@ -154,45 +154,23 @@ export function LandingPage() {
       <div className="scrollHint" aria-hidden="true">
               <span className="scrollArrow" />
       </div>
-      <section id="inscription" className="section subtle">
-        <div className="container">
-          <div className="split">
-            <div>
-              <h2 className="sectionTitle">Inscription</h2>
-              <p className="muted">
-                Inscrivez-vous seul ou avec vos partenaires. Les affectations finales seront
-                communiquées par mail.
-              </p>
-            </div>
-            <div className="pillRow" aria-label="Formats d'inscription">
-              <span className="pill">Solo</span>
-              <span className="pill">Équipe de 4</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
+      <section id="inscription" className="section">
         <div className="container">
           <div className="ctaFinal">
-            <div className="qrWrap" aria-label="Emplacement QR Code">
-              <div className="qr">
-                <img
-                  src="/Figures/QRcode.png"
-                  alt="QR code d'inscription"
-                  className="qrImg"
-                  loading="lazy"
-                />
-              </div>
-              <div className="qrPulse" aria-hidden="true" />
-            </div>
-
             <div className="ctaText">
-              <h2 className="sectionTitle">
-                Passez par le QR code ou appuyez sur ce bouton pour vous inscrire via Microsoft Forms.
-              </h2>
-              
-              
+              <h2 className="sectionTitle">Inscription</h2>
+              <p className="muted" style={{ margin: '10px 0 0' }}>
+                Inscrivez-vous seul ou avec vos partenaires. Les affectations finales seront communiquées par mail.
+              </p>
+
+              <div className="pillRow" aria-label="Formats d'inscription" style={{ marginTop: 12, justifyContent: 'center' }}>
+                <span className="pill">Solo</span>
+                <span className="pill">Équipe de 4</span>
+              </div>
+
+              <p className="muted" style={{ margin: '14px 0 0' }}>
+                Pour vous inscrire, ouvrez le formulaire Microsoft Forms.
+              </p>
               <div style={{ marginTop: 14 }}>
                 <a
                   className="btn primary"
@@ -205,7 +183,7 @@ export function LandingPage() {
                     alt="Microsoft Forms"
                     style={{ width: 18, height: 18, objectFit: 'contain' }}
                   />
-                  Ouvrir le formulaire
+                  S&apos;inscrire
                 </a>
               </div>
             </div>
