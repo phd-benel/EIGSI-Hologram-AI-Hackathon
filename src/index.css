@@ -356,7 +356,7 @@ a {
 
 .programRow {
   display: grid;
-  grid-template-columns: 100px 1fr 1.2fr;
+  grid-template-columns: clamp(72px, 16vw, 100px) 1fr 1.2fr;
   gap: 0;
   padding: 14px 18px;
   border-top: 1px solid var(--line);
@@ -388,54 +388,37 @@ a {
 
 @media (max-width: 640px) {
   .programTable {
-    background: transparent;
-    border: none;
-    overflow: visible;
+    background: white;
+    border: 1px solid var(--blue-border-weak);
+    overflow: hidden;
   }
 
   .programHeader {
-    display: none;
+    display: grid;
   }
 
   .programRow {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 14px;
-    margin-top: 12px;
-    border: 1px solid var(--blue-border-weak);
-    border-radius: var(--radius-sm);
-    background: white;
-    box-shadow: 0 14px 40px rgba(0, 35, 102, 0.06);
-  }
-
-  .programRow:first-child {
-    border-top: 1px solid var(--blue-border-weak);
+    grid-template-columns: 76px minmax(0, 1fr) minmax(0, 1.1fr);
+    padding: 10px 12px;
   }
 
   .programCell {
-    font-size: 14px;
+    font-size: 12.5px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
   }
 
   .programCell.time {
-    justify-self: start;
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: rgba(0, 35, 102, 0.06);
-    border: 1px solid rgba(0, 35, 102, 0.12);
+    padding: 0;
+    background: transparent;
+    border: none;
+    display: block;
+    width: auto;
   }
 
   .programCell:not(.time)::before {
-    content: attr(data-label);
-    display: block;
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(0, 35, 102, 0.78);
-    margin-bottom: 4px;
-    font-weight: 600;
+    content: none;
+    display: none;
   }
 
   .centerOnMobile {
@@ -928,13 +911,7 @@ a {
   }
 
   .programRow {
-    grid-template-columns: 90px 1fr;
-    grid-auto-rows: auto;
-  }
-
-  .programCell.detail {
-    grid-column: 1 / -1;
-    padding-top: 6px;
+    grid-template-columns: clamp(72px, 16vw, 92px) 1fr 1.1fr;
   }
 
   .programNoteGrid {
