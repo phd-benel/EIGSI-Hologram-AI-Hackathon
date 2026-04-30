@@ -19,8 +19,8 @@ export function LandingPage() {
     '/Figures/Firefly Scene on a minimalist student desk in a dimly lit room. On the desk, a Virtual Pedagogical A.mp4',
   )
 
-  const countdownStart = new Date(2026, 3, 29) // 29 avril 2026
-  const countdownEnd = new Date(2026, 4, 12) // 12 mai 2026
+  const countdownStart = new Date(2026, 3, 30) // 29 avril 2026
+  const countdownEnd = new Date(2026, 4, 14) // 12 mai 2026
   const msPerDay = 24 * 60 * 60 * 1000
 
   const today = new Date()
@@ -73,6 +73,22 @@ export function LandingPage() {
                   alt="Informations clés : 2 semaines, finalisation le 24 Avril, jury et brevet"
                 />
               </span>
+            <motion.p
+              className="countdownBanner"
+              initial={{ opacity: 0, y: 6, scale: 0.995 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                scale: [1, 1.015, 1],
+              }}
+              transition={{
+                opacity: { duration: 0.35, ease: 'easeOut' },
+                y: { duration: 0.35, ease: 'easeOut' },
+                scale: { duration: 1.4, repeat: Infinity, ease: 'easeInOut' },
+              }}
+            >
+              Il vous reste <strong>{remainingDays}</strong> {remainingDaysLabel} avant la journée de présentation.
+            </motion.p>
           </div>
         </div>
       </section>
@@ -81,9 +97,6 @@ export function LandingPage() {
         <div className="container">
           <div className="sectionHeader">
             <div>
-              <p className="muted" style={{ margin: '0 0 8px', fontSize: 18, lineHeight: 1.55 }}>
-                Il vous reste <strong>{remainingDays}</strong> {remainingDaysLabel} avant la journée de présentation.
-              </p>
               <h3 className="sectionTitle">Programme (Après-Midi) — Durant la semaine du 11 mai 2026</h3>
               <p className="muted" style={{ margin: '6px 0 0', fontSize: 18, lineHeight: 1.55 }}>
                 La date exacte de l&apos;après-midi consacrée au HACKATHON vous sera précisée prochainement ...
