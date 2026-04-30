@@ -19,6 +19,21 @@ export function LandingPage() {
     '/Figures/Firefly Scene on a minimalist student desk in a dimly lit room. On the desk, a Virtual Pedagogical A.mp4',
   )
 
+  const countdownStart = new Date(2026, 3, 29) // 29 avril 2026
+  const countdownEnd = new Date(2026, 4, 12) // 12 mai 2026
+  const msPerDay = 24 * 60 * 60 * 1000
+
+  const today = new Date()
+  const todayAtMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate())
+  const effectiveStart =
+    todayAtMidnight.getTime() < countdownStart.getTime() ? countdownStart : todayAtMidnight
+
+  const remainingDays = Math.max(
+    0,
+    Math.ceil((countdownEnd.getTime() - effectiveStart.getTime()) / msPerDay),
+  )
+  const remainingDaysLabel = remainingDays <= 1 ? 'jour' : 'jours'
+
   return (
     <motion.main
       className="page"
@@ -66,7 +81,10 @@ export function LandingPage() {
         <div className="container">
           <div className="sectionHeader">
             <div>
-              <h3 className="sectionTitle">Programme (Après-Midi) — Durant la semaine du 10 mai 2026</h3>
+              <p className="muted" style={{ margin: '0 0 8px', fontSize: 18, lineHeight: 1.55 }}>
+                Il vous reste <strong>{remainingDays}</strong> {remainingDaysLabel} avant la journée de présentation.
+              </p>
+              <h3 className="sectionTitle">Programme (Après-Midi) — Durant la semaine du 11 mai 2026</h3>
               <p className="muted" style={{ margin: '6px 0 0', fontSize: 18, lineHeight: 1.55 }}>
                 La date exacte de l&apos;après-midi consacrée au HACKATHON vous sera précisée prochainement ...
               </p>
